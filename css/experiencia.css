@@ -1,0 +1,130 @@
+.experiencia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.experiencia-title {
+  font-size: 8ch;
+  font-weight: bold;
+  width: 240px;
+  word-wrap: break-word;
+  grid-row: 1 / -1;
+  color: rgba(206, 206, 206, 0.81);
+  line-height: 100%;
+  /* letter-spacing: 10px; */
+}
+
+.experiencia-descricao {
+  grid-column: 2 / -1;
+  width: 430px;
+  font-size: 1.1rem;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.experiencia-right {
+  grid-column: 2 / -1;
+}
+
+.projeto-year {
+  display: inline-block;
+  position: relative;
+  left: -55px;
+  top: 34px;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.projeto-year::after {
+  content: '';
+}
+
+.projeto-descricao {
+  display: grid;
+  gap: 5px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  background: #d7d6d67e;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.projeto-descricao h3 {
+  font-weight: bold;
+  font-size: 0.9rem;
+  grid-row: 1;
+}
+
+.projeto-description-title::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to top, rgb(12, 198, 12), white);
+  width: 3px;
+  height: 20px;
+  left: -22px;
+  top: 3px
+}
+
+.projeto-descricao p {
+  grid-column: 1;
+  font-size: 0.8rem;
+  line-height: 130%;
+}
+
+.projeto-descricao-skills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-content: center;
+}
+
+.projeto-descricao-skills li {
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.7rem;
+  background: white;
+}
+
+@media (max-width: 750px) {
+  .experiencia {
+    gap: 0px;
+  }
+
+  .experiencia-title {
+    font-size: 8ch;
+    font-weight: bold;
+    grid-column: 1 / -1;
+    color: rgba(0, 0, 0, 0.1);
+    line-height: 100%;
+    width: 100%;
+  }
+
+  .experiencia-right {
+    grid-column: 1 / -1;
+  }
+  .experiencia-descricao {
+    /* grid-column: 2 / -1; */
+    width: 100%;
+    font-size: 1rem;
+    word-spacing: 2px;
+    margin-bottom: 0;
+    padding: 15px 0;
+  }
+
+  .projetos-lista {
+    padding: 5px 0;
+  }
+
+  .projeto-descricao {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .projeto-year {
+    display: none;
+  }
+}
